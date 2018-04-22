@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
     <team-selector-form></team-selector-form>
   </div>
 </template>
@@ -12,11 +11,6 @@ export default {
   name: 'HelloWorld',
   components: {
     'team-selector-form': TeamSelectorForm
-  },
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
   }
 }
 </script>
