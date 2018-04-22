@@ -1,14 +1,17 @@
 <template>
-  <div>
+  <div class="box container is-widescreen">
     <h2 class="subtitle">Starting XI</h2>
-    <div class="container is-widescreen">
-      <input v-for="n in 11" type="text" class="input field" :key="n" v-model="firstTeam[n-1]" placeholder="Enter player name"  />
-    </div>
+    <input v-for="n in 11" type="text" class="input field" :key="n" v-model="firstTeam[n-1]" placeholder="Enter player name"  />
 
     <h2 class="subtitle">Substitutes</h2>
-    <div class="container is-widescreen">
-      <input v-for="n in 5" type="text" class="input field" :key="n" v-model="subtitutes[n-1]" placeholder="Enter substitute name (optional)" />
-    </div>
+    <input v-for="n in 5" type="text" class="input field" :key="n + 'sub'" v-model="subtitutes[n-1]" placeholder="Enter substitute name (optional)" />
+
+    <a class="button is-primary is-large">
+      <span class="icon is-medium">
+        <icon name="download"></icon>
+      </span>
+      <span>Generate</span>
+    </a>
   </div>
 </template>
 

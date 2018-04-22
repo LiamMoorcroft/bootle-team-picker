@@ -17,6 +17,7 @@
     "buefy": "^0.6.5",
     "bulma-start": "0.0.2",
     "vue": "^2.5.2",
+    "vue-awesome": "^3.0.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
