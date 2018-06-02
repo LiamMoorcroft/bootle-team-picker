@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import TeamSelectorFrom from '@/components/TeamSelectorForm'
+import TeamGenerated from '@/components/TeamGenerated'
 
 Vue.use(Router)
 
@@ -8,8 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Selection Form',
+      component: TeamSelectorFrom
+    },
+    {
+      path: '/team',
+      name: 'Generated Team',
+      component: TeamGenerated
     }
   ]
 })
