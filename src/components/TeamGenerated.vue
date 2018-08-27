@@ -19,10 +19,10 @@ export default {
   name: 'TeamGenerated',
   computed: {
     startingPlayers () {
-      return this.$store.state.startingPlayers;
+      return this.$store.state.startingPlayers
     },
     substitutes () {
-      return this.$store.state.substitutions;
+      return this.$store.state.substitutions
     }
   }
 }
