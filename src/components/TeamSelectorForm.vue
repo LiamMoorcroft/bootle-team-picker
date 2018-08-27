@@ -6,22 +6,31 @@
     <h2 class="subtitle">Substitutes</h2>
     <input v-for="n in 5" type="text" class="input field" :key="n + 'sub'" v-model="subtitutes[n-1]" placeholder="Enter substitute name (optional)" />
 
-      <router-link to="/team" class="button is-primary is-large">
+      <a class="button is-primary is-large" @click="test">
         <span class="icon is-medium">
           <icon name="download"></icon>
         </span>
         <span>Generate</span>
-      </router-link>
+      </a>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'TeamSelectorForm',
   data () {
     return {
       firstTeam: [],
       subtitutes: []
+    }
+  },
+  
+  methods: {
+    test() {
+      this.$store.dispatch('updateStartingPlayers', this.firstTeam)
+      this.$store.dispatch('updateSubstitutions', this.subtitutes)
+      this.$router.push('/team')
     }
   }
 }
